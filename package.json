@@ -3,13 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test:open": "cypress open"
+    "test:open": "cypress open",
+    "test:admin": "cypress run --record --key b40bf198-00e4-4c8e-9251-cc663a7bb4c8 --group Admin --ci-build-id 12 --spec \"cypress/e2e/admin.cy.js\"",
+    "test:movies": "cypress run --record --key b40bf198-00e4-4c8e-9251-cc663a7bb4c8 --group Movies --ci-build-id 12 --spec \"cypress/e2e/movies.cy.js\"",
+    "test:booking": "cypress run --record --key b40bf198-00e4-4c8e-9251-cc663a7bb4c8 --group Booking --ci-build-id 12 --spec \"cypress/e2e/booking.cy.js\"",
+    "test:parallel": "run-p -c test:admin test:movies test:booking"
   },
   "keywords": [],
   "author": "zhmaeva",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "cypress": "^13.13.2"
+    "cypress": "^13.13.2",
+    "npm-run-all": "^4.1.5"
   }
 }
