@@ -1,4 +1,5 @@
 ## Домашнее задание к занятию «7.8. CI/CD Jenkins»
+[Dashboard all runs](https://cloud.cypress.io/projects/eiggto/runs?branches=%5B%5D&committers=%5B%5D&flaky=%5B%5D&page=1&status=%5B%5D&tags=%5B%5D&tagsMatch=ANY&timeRange=%7B%22startDate%22%3A%222023-08-09%22%2C%22endDate%22%3A%222024-08-08%22%7D)
 
 #### Задача 1. Cypress. Параллельный запуск тестов
 
@@ -21,5 +22,3 @@
 - Добавлен новый параметр для запуска тестов из п. 5 в Jenkins.
 
 ![result](image-3.png)
-
-[Dashboard](https://cloud.cypress.io/projects/eiggto/runs?branches=%5B%5D&committers=%5B%5D&flaky=%5B%5D&page=1&status=%5B%5D&tags=%5B%5D&tagsMatch=ANY&timeRange=%7B%22startDate%22%3A%222023-08-09%22%2C%22endDate%22%3A%222024-08-08%22%7D)
