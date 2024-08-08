@@ -4,10 +4,26 @@
   "main": "index.js",
   "scripts": {
     "test:open": "cypress open",
-    "test:admin": "cypress run --record --key b40bf198-00e4-4c8e-9251-cc663a7bb4c8 --group Admin --ci-build-id 12 --spec \"cypress/e2e/admin.cy.js\"",
-    "test:movies": "cypress run --record --key b40bf198-00e4-4c8e-9251-cc663a7bb4c8 --group Movies --ci-build-id 12 --spec \"cypress/e2e/movies.cy.js\"",
-    "test:booking": "cypress run --record --key b40bf198-00e4-4c8e-9251-cc663a7bb4c8 --group Booking --ci-build-id 12 --spec \"cypress/e2e/booking.cy.js\"",
-    "test:parallel": "run-p -c test:admin test:movies test:booking"
+
+    "test:admin:chrome": "cypress run --record --group Admin --spec \"cypress/e2e/adminPage/adminAuth.cy.js\" --browser chrome",
+    "test:movies:chrome": "cypress run --record --group Movies --spec \"cypress/e2e/userPage/movies.cy.js\" --browser chrome",
+    "test:booking:chrome": "cypress run --record --group Booking --spec \"cypress/e2e/userPage/booking.cy.js\" --browser chrome",
+    "test:parallel:chrome": "run-p -c test:admin:chrome test:movies:chrome test:booking:chrome",
+
+    "test:admin:edge": "cypress run --record --group Admin --spec \"cypress/e2e/adminPage/adminAuth.cy.js\" --browser edge",
+    "test:movies:edge": "cypress run --record --group Movies --spec \"cypress/e2e/userPage/movies.cy.js\" --browser edge",
+    "test:booking:edge": "cypress run --record --group Booking --spec \"cypress/e2e/userPage/booking.cy.js\" --browser edge",
+    "test:parallel:edge": "run-p -c test:admin:edge test:movies:edge test:booking:edge",
+
+    "test:admin:electron": "cypress run --record --group Admin --spec \"cypress/e2e/adminPage/adminAuth.cy.js\" --browser electron",
+    "test:movies:electron": "cypress run --record --group Movies --spec \"cypress/e2e/userPage/movies.cy.js\" --browser electron",
+    "test:booking:electron": "cypress run --record --group Booking --spec \"cypress/e2e/userPage/booking.cy.js\" --browser electron",
+    "test:parallel:electron": "run-p -c test:admin:electron test:movies:electron test:booking:electron",
+
+    "test:parallel:browser": "run-p -c test:admin:chrome test:movies:edge test:booking:electron",
+    "test:folder1": "cypress run --record --group Folder1 --spec \"cypress/e2e/adminPage/*\"",
+    "test:folder2": "cypress run --record --group Folder2 --spec \"cypress/e2e/adminPage/*\"",
+    "test:parallel:folder": "run-p -c test:folder1 test:folder2"
   },
   "keywords": [],
   "author": "zhmaeva",
