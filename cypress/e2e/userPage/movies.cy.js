@@ -1,5 +1,5 @@
-import tests from "../fixtures/movies.json";
-import selectors from "../fixtures/selectors";
+import tests from "../../fixtures/movies.json";
+import selectors from "../../fixtures/selectors";
 
 describe('Тесты для проверки главной страницы сайта "ИДЁМВКИНО"', () => {
   beforeEach(() => {

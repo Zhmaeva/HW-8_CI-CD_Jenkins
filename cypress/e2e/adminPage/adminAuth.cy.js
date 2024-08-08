@@ -1,6 +1,6 @@
-import loginHappyPath from "../fixtures/loginHappyPath.json";
-import loginSadPath from "../fixtures/loginSadPath.json";
-import selectors from "../fixtures/selectors";
+import loginHappyPath from "../../fixtures/loginHappyPath.json";
+import loginSadPath from "../../fixtures/loginSadPath.json";
+import selectors from "../../fixtures/selectors";
 
 describe('Тесты для проверки админки сайта "ИДЁМВКИНО"', () => {
   beforeEach(() => {

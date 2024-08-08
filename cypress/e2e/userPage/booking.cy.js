@@ -1,5 +1,5 @@
-import loginHappyPath from "../fixtures/loginHappyPath.json";
-import selector from "../fixtures/selectors";
+import loginHappyPath from "../../fixtures/loginHappyPath.json";
+import selector from "../../fixtures/selectors";
 
 describe('Бронирование фильма в доступный зал', () => {
   it("Получение названия из админки и бронирование билета на этот фильм", () => {
