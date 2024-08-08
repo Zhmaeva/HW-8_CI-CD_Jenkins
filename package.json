@@ -22,7 +22,7 @@
 
     "test:parallel:browser": "run-p -c test:admin:chrome test:movies:edge test:booking:electron",
     "test:folder1": "cypress run --record --group Folder1 --spec \"cypress/e2e/adminPage/*\"",
-    "test:folder2": "cypress run --record --group Folder2 --spec \"cypress/e2e/adminPage/*\"",
+    "test:folder2": "cypress run --record --group Folder2 --spec \"cypress/e2e/userPage/*\"",
     "test:parallel:folder": "run-p -c test:folder1 test:folder2"
   },
   "keywords": [],
